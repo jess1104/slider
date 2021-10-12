@@ -7,13 +7,15 @@
   /* IN THE END */
   overflow: hidden;
 }
-.slide {
+.slide-container {
   position: absolute;
+  width: 200rem;
   top: 0;
-  width: 100%;
+}
+.slide {
+  width: 50rem;
+  float: left;
   /* opacity: 0.5; */
-  /* 緩慢動畫 */
-  transition: transform 1s;
 }
 .slide > img {
   /* 照片統一大小 */
@@ -63,7 +65,7 @@
   border-radius: 50%;
   margin-right: 1.75rem;
   cursor: pointer;
-  transition: all 0.5s;
+  /* transition: all 0.5s; */
 
   /* Only necessary when overlying images */
   /*   box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
