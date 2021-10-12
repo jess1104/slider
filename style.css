@@ -29,7 +29,6 @@
   z-index: 10;
   border: none;
   background: rgba(255, 255, 255, 0.7);
-  font-family: inherit;
   color: #333;
   border-radius: 50%;
   height: 2.5rem;
@@ -40,6 +39,7 @@
 
 .slider__btn--left {
   left: 6%;
+  /* 代表在只有置中於左上需要再把x,y拉回50%才是置中 */
   transform: translate(-50%, -50%);
 }
 
@@ -52,8 +52,8 @@
   position: absolute;
   bottom: 5%;
   left: 50%;
+  /* 當我左推50%,我要再把整個框拉回50%達到置中 */
   transform: translateX(-50%);
-  display: flex;
 }
 
 .dots__dot {
@@ -63,12 +63,8 @@
   height: 0.75rem;
   width: 0.75rem;
   border-radius: 50%;
-  margin-right: 1.75rem;
+  margin: 0 1rem;
   cursor: pointer;
-  /* transition: all 0.5s; */
-
-  /* Only necessary when overlying images */
-  /*   box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
 }
 
 .dots__dot--active {
